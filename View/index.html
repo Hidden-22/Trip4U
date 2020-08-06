@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../asset/css/common.css">
+    <link rel="stylesheet" href="../asset/css/header.css">
+    <link rel="stylesheet" href="../asset/css/index.css">
+    <link rel="stylesheet" href="../asset/media/common-media.css">
+    <link rel="stylesheet" href="../asset/media/header-media.css">
+    <link rel="stylesheet" href="../asset/media/index-media.css">
+    <link rel="stylesheet" href="../asset/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script defer src="../asset/javaScript/header.js"></script>
+    <script defer src="../asset/javaScript/index.js"></script>
+    <title>Trip4U</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container nav-container">
+            <nav class="top-navbar">
+                <div class="nav-menu-btn-container">
+                    
+                    <img class="nav-menu-btn" src="../img/menu-btn-white.png" alt="" onclick="sidemenuOpen()">
+                    
+                </div>
+                <div class="nav-logo-container">
+                    <a href="#">
+                        <svg height="40" width="180">
+                            <defs>
+                              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:rgb(255, 115, 0);stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:rgb(255, 166, 0);stop-opacity:1" />
+                              </linearGradient>
+                            </defs>
+                            <ellipse cx="90" cy="22" rx="70" ry="17" fill="url(#grad1)" />
+                            <text fill="#ffffff" font-size="26" font-family="Verdana" x="40" y="30">Trip4U</text>
+                            Sorry, your browser does not support inline SVG.
+                          </svg>
+                    </a>
+                </div>
+                <div class="nav-searchbox-container">
+                    <form class="nav-searchbox-form" action="">
+                        <button class="nav-searchbox-button">
+                            <img class="nav-search-icon" src="../img/search-icon.png" alt="">
+                        </button>
+                        <script defer src="../css/cssJavascript.js"></script>
+                        <input class="nav-search-textbox" type="text" placeholder="Where to go...?">
+                    </form>
+                </div>
+
+                <div class="nav-menu-container">
+                    <ul class="nav-ul">
+                        <button class="button nav-button" onclick="showSingup()">Sign up</button>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container fix-navbar-container">
+                <nav class="fix-navbar">
+                    <ul class="fix-navbar-ul">
+                       <a href="#" class="fix-navbar-link"> <li class="fix-navbar-li">place</li></a>
+                       <a href="#" class="fix-navbar-link"><li class="fix-navbar-li">Hotels</li></a>
+                       <a href="#" class="fix-navbar-link"><li class="fix-navbar-li">Restaurant</li></a>
+                       <a href="#" class="fix-navbar-link"><li class="fix-navbar-li">Things to do</li></a>
+                       <a href="#" class="fix-navbar-link"><li class="fix-navbar-li">Make my trip</li></a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="container heder-text">
+            <section>
+                <h3>Welcome To India</h3>
+                <h1>DO COME & VISIT 
+                <span class="change-content"> </span></h1>
+                <p>"India Once Is Not Enough"</p>
+            </section>
+        </div>
+
+        <!-- ######################## Sidebar menu ###################### -->
+        
+        <nav class="sidebar-menu" id="sidebarID">
+            <ul class="sidebar-nav">
+                    <span class="signup-close-button" onclick="sidemenuClose()">
+                        &times;
+                    </span>
+                    <li class="sidebar-item">   
+                        <a href="#" class="site-name">Trip4You</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="nav-link" onclick="sidemenuShowSingup()">Singup</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="nav-link">place</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="nav-link">Hotels</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="nav-link">Restaurant</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="nav-link">Things to do</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="nav-link">Make my trip</a>
+                    </li>
+                    <li class="sidebar-item">
+                            <a href="#" class="nav-link">Contact Us</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="nav-link">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>    
+        </nav>
+
+    </header>
+
+    <section class="signup-back-container">
+        <div class="signup-front-container">
+            <span class="signup-close-button" onclick="closeSingup()">
+                &times;
+            </span>
+            <div class="signup-form-container">
+                <header>Sign up</header>
+                <form action="#" class="signup-form">
+                  <input type="textbox" name="name" placeholder="Name" required />
+                  <input type="email" name="email" placeholder="E-mail" required/>
+                  <input type="password" name="password" placeholder="Password" required/>
+                  <input type="password" name="re-password" placeholder="Retype password" required/>
+                  
+                  <input type="submit" name="signup_submit" value="Sign up" />
+                </form>
+            </div>
+            <hr>
+            <div class="signin-line">
+                <p>
+                    Already Account? <span onclick="showSingin()"> click here...<span>
+                </p>
+            </div>
+        </div>
+        <div class="signin-front-container">
+            <span class="signup-close-button" onclick="closeSingup()">
+                &times;
+            </span>
+            <div class="signin-form-container">
+                <header>Sign in</header>
+                <form action="#" class="signin-form">
+                  <!-- <input type="textbox" name="name" placeholder="Name" required /> -->
+                  <input type="email" name="email" placeholder="E-mail" required/>
+                  <input type="password" name="password" placeholder="Password" required/>
+                  <!-- <input type="password" name="re-password" placeholder="Retype password" required/> -->
+                  <div >
+                    <input type="checkbox" name="password-remember" id="pas-re"><label for="pas-re">Remeber me</label>
+                    <span onclick="showforget()">Forget Password? </span>
+                  </div>
+                  
+                  <input type="submit" name="signup_submit" value="Sign in" />
+                </form>
+            </div>
+            <hr>
+            <div class="signup-line">
+                <p>
+                    Create Account? <span onclick="showSingup()"> click here...<span>
+                </p>
+            </div>
+        </div>
+        <div class="forget-front-container">
+            <span class="signup-close-button" onclick="closeSingup()">
+                &times;
+            </span>
+            <div class="forget-form-container">
+                <header>Forget Password</header>
+                <form action="#" class="forget-form">
+                  <!-- <input type="textbox" name="name" placeholder="Name" required /> -->
+                  <input type="email" name="email" placeholder="E-mail" required/>
+                  <input type="password" name="password" placeholder="Password" required/>
+                  <input type="password" name="re-password" placeholder="Retype password" required/>
+                  <!-- <div >
+                    <input type="checkbox" name="password-remember" id="pas-re"><label for="pas-re">Remeber me</label>
+                    <span>Forget Password? </span>
+                  </div> -->
+                  
+                  <input type="submit" name="signup_submit" value="Forget password" />
+                </form>
+            </div>
+            <!-- <hr>
+            <div class="signup-line">
+                <p>
+                    Create Account? <span onclick="showSingup()"> click here...<span>
+                </p>
+            </div> -->
+        </div>
+    </section>
+
+    <div class="container bottom-navbar-container">
+        <nav class="bottom-navbar">
+            <ul class="bottom-nav-ul">
+                <li class="bottom-nav-li">
+                    <a href="">
+                        <div class="bottom-nav-icon-container">
+                            <img class="bottom-nav-icon" src="../img/placeicon.png" alt="">
+                        </div>
+                        <div class="bottom-nav-text-container">
+                            <span class ="bottom-nav-text" >Place</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="bottom-nav-li">
+                    <a href="">
+                        <div class="bottom-nav-icon-container">
+                            <img class="bottom-nav-icon" src="../img/hotelicon.png" alt="">
+                        </div>
+                        <div class="bottom-nav-text-container">
+                            <span class ="bottom-nav-text" >Hotels</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="bottom-nav-li">
+                    <a href="">
+                        <div class="bottom-nav-icon-container">
+                            <img class="bottom-nav-icon" src="../img/restauranticon.png" alt="">
+                        </div>
+                        <div class="bottom-nav-text-container">
+                            <span class ="bottom-nav-text" >Restaurant</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="bottom-nav-li">
+                    <a href="">
+                        <div class="bottom-nav-icon-container">
+                            <img class="bottom-nav-icon" src="../img/thingsicon.png" alt="">
+                        </div>
+                        <div class="bottom-nav-text-container">
+                            <span class ="bottom-nav-text" >Things to do</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="bottom-nav-li makeMyTrip-for-media">
+                    <a href="">
+                        <div class="bottom-nav-icon-container">
+                            <img class="bottom-nav-icon" src="../img/world.png" alt="">
+                        </div>
+                        <div class="bottom-nav-text-container">
+                            <span class ="bottom-nav-text">Make my trip</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <section class="top-place">
+        <div class="container place-container">
+            <div class="prev-btn ctrl-btn topPlacePrvbtn" > &lt;  </div>
+            <div class="next-btn ctrl-btn topPlaceNextbtn"> &gt; </div>
+            <div>
+                <h1>Top Places</h1>
+            </div>
+            <hr>
+            <div class="card-container" id="topPlaceSlider">
+                <div class="card-wrapper" id="topPlaceSlide">
+                <section class="card">
+                    <a class="card-link"  id="place-card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/Places/kerela.jpg" alt="">
+                        <div class="card-place-name" id = "card-place-name">
+                            <h2>Kerla</h2>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>Kerala, a state on India's tropical Malabar Coast, has nearly 600km of Arabian Sea shoreline.</p>
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                <section class="card">
+                    <a class="card-link"  id="place-card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/Places/gujarat.jpg" alt="">
+                        <div class="card-place-name" id = "card-place-name">
+                            <h2>Gujarat</h2>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>Gujarat is a state on the western coast of India with a coastline of 1,600 km.</p>
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                <script>
+                    
+                </script>
+                <section class="card">
+                    <a class="card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/Places/taj mahal.jpg" alt="">
+                        <div class="card-place-name">
+                            <h2>Taj Mahal</h2>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>The Taj Mahal is an ivory-white marble mausoleum on the southern bank of the river Yamuna.</p>
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                <section class="card">
+                    <a class="card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/Places/rajasthan.jpg" alt="">
+                        <div class="card-place-name">
+                            <h2>Rajasthan</h2>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>Rajasthan is a state in northern India.It is the largest Indian state by area and the seventh largest by population</p>
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                <section class="card">
+                    <a class="card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/Places/delhi.jpg" alt="">
+                        <div class="card-place-name">
+                            <h2>Delhi</h2>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>Delhi, India’s capital territory, is a massive metropolitan area in the country’s north.</p>
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                <section class="card">
+                    <a class="card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/Places/mumbai.jpg" alt="">
+                        <div class="card-place-name">
+                            <h2>Mumbai</h2>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>Mumbai (formerly called Bombay) is a densely populated city on India’s west coast. </p>
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                <section class="card">
+                    <a class="card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/Places/manali.jpg" alt="">
+                        <div class="card-place-name">
+                            <h2>Manali</h2>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>Manali is a high-altitude Himalayan resort town in India’s northern Himachal Pradesh state.</p>
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                <section class="card">
+                    <a class="card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/Places/bengaluru.jpg" alt="">
+                        <div class="card-place-name">
+                            <h2>Bengaluru</h2>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>Bengaluru is the capital of India's southern Karnataka state. The center of India's high-tech industry.</p>
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hotel">
+        <div class="container place-container">
+            <div class="prev-btn ctrl-btn hotelPrvbtn" > &lt;  </div>
+            <div class="next-btn ctrl-btn hotelNextbtn"> &gt; </div>
+            <div>
+                <h1>Top Hotel</h1>
+            </div>
+            <hr>
+            <div class="card-container" id="hotelSlider">
+                <div class="card-wrapper" id="hotelSlide">
+                <section class="card">
+                    <a class="card-link"  id="place-card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/Hotels/taj mahal palace.jpg" alt="">
+                        <div class="card-place-name" id = "card-place-name">
+                            <h2>Taj Mahal Palace</h2>
+                            <!-- https://www.google.com/travel/hotels/India/entity/ChYI1_7cptqQwZTAARoJL20vMDZieDFjEAE?g2lb=202158%2C2502548%2C4258168%2C4260007%2C4270442%2C4274032%2C4305595%2C4306835%2C4317915%2C4322823%2C4328159%2C4364504%2C4366684%2C4367953%2C4371334%2C4381263%2C4386665%2C4395590%2C4396533%2C4397706%2C4398672%2C4399105%2C4401769%2C4403881%2C4270859%2C4284970%2C4291517%2C4316256&hl=en&gl=in&un=1&ap=aAE&q=5%20star%20hotels%20in%20india&rp=EJr98c-_jeD1IRDX_tym2pDBlMABELKK1_im3KKwgwEQ5YzJtqe9158wOAFAAEgCogEFSW5kaWE&ictx=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&hrf=CgUIiCcQACIDSU5SKhYKBwjkDxAIGAMSBwjkDxAIGAQYASgAOAWwAQBYAWgBmgEHEgVJbmRpYaIBEQoIL20vMDNyazASBUluZGlhqgEqCgIIIRICCAgSAghlEgIIFRICCGcSAghbEgIILxICCFoSAghUEgIIIBgBqgEPCgIIEhIDCJsBEgIIaBgBqgESCgIIFBICCB0SAggbEgIIUhgBqgEHCgMIoQIYAKoBGgoCCBwSAggHEgIIURICCHMSAghHEgIINhgBqgEfCgIIJRICCHUSAwigAhICCHcSAgh5EgIIehICCHYYAaoBGwoCCBESAggqEgIIQBICCDgSAwiZAhICCAIYAaoBPgoCCC4SAgg8EgIIVhICCDoSAwiHARICCBoSAghIEgMIgQISAgg9EgMIgwESAggDEgIIDBIDCIkBEgIIJxgBqgELCgMI4QISAghjGAGqARcKAghQEgIIGRIDCIQBEgIITBICCE8YAaoBBwoDCMsBGACqAQ4KAgg1EgIIExICCDIYAZIBAiAB -->
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>Apollo Bandar, Colaba, Mumbai, Maharashtra 400001</p>
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                <section class="card">
+                    <a class="card-link"  id="place-card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/Hotels/JW Marriott Hotel Chandigarh.jpg" alt="">
+                        <div class="card-place-name" id = "card-place-name">
+                            <h2>JW Marriott Hotel</h2>
+                            <!-- https://www.google.com/travel/hotels/India/entity/CgoIn6b2m5-Al5J-EAEaYkFHWklFZ1lRblp3QWVpRTVHWlFUVDAyX2JsZDFHc3FQeUlGb1dFZnhIeE1tQTZaYlU0SDhxRmc1WWRUTVFWMS1SWVdhT1VFNzBVTmE4Q1k1Q09XNTVzVzFqZF9OYU45VE1R?g2lb=202158%2C2502548%2C4258168%2C4260007%2C4270442%2C4274032%2C4305595%2C4306835%2C4317915%2C4322823%2C4328159%2C4364504%2C4366684%2C4367953%2C4371334%2C4381263%2C4386665%2C4395590%2C4396533%2C4397706%2C4398672%2C4399105%2C4401769%2C4403881%2C4270859%2C4284970%2C4291517%2C4316256&hl=en&gl=in&un=1&ap=aAE&q=5%20star%20hotels%20in%20india&rp=EJr98c-_jeD1IRDX_tym2pDBlMABELKK1_im3KKwgwEQ5YzJtqe9158wOAFAAEgCogEFSW5kaWE&ictx=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&hrf=CgUIiCcQACIDSU5SKhYKBwjkDxAIGAMSBwjkDxAIGAQYASgAOAWwAQBYAWgBmgEHEgVJbmRpYaIBEQoIL20vMDNyazASBUluZGlhqgEqCgIIIRICCAgSAghlEgIIFRICCGcSAghbEgIILxICCFoSAghUEgIIIBgBqgEPCgIIEhIDCJsBEgIIaBgBqgESCgIIFBICCB0SAggbEgIIUhgBqgEHCgMIoQIYAKoBGgoCCBwSAggHEgIIURICCHMSAghHEgIINhgBqgEfCgIIJRICCHUSAwigAhICCHcSAgh5EgIIehICCHYYAaoBGwoCCBESAggqEgIIQBICCDgSAwiZAhICCAIYAaoBPgoCCC4SAgg8EgIIVhICCDoSAwiHARICCBoSAghIEgMIgQISAgg9EgMIgwESAggDEgIIDBIDCIkBEgIIJxgBqgELCgMI4QISAghjGAGqARcKAghQEgIIGRIDCIQBEgIITBICCE8YAaoBBwoDCMsBGACqAQ4KAgg1EgIIExICCDIYAZIBAiAB -->
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>Plot No: 6, Dakshin Marg, 35B, Sector 35, Chandigarh, 160035•0172 455 5555</p>
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                <script>
+                    
+                </script>
+                <section class="card">
+                    <a class="card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/Hotels/The Oberoi Udaivilas, Udaipur.jpg" alt="">
+                        <div class="card-place-name">
+                            <h2>The Oberoi Udaivilas</h2>
+                            <!-- https://www.google.com/travel/hotels/India/entity/ChkImv3xz7-N4PUhGg0vZy8xMWNzNXJ3azkzEAE?g2lb=202158%2C2502548%2C4258168%2C4260007%2C4270442%2C4274032%2C4305595%2C4306835%2C4317915%2C4322823%2C4328159%2C4364504%2C4366684%2C4367953%2C4371334%2C4381263%2C4386665%2C4395590%2C4396533%2C4397706%2C4398672%2C4399105%2C4401769%2C4403881%2C4270859%2C4284970%2C4291517%2C4316256&hl=en&gl=in&un=1&ap=aAE&q=5%20star%20hotels%20in%20india&rp=EJr98c-_jeD1IRDX_tym2pDBlMABELKK1_im3KKwgwEQ5YzJtqe9158wOAFAAEgCogEFSW5kaWE&ictx=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&hrf=CgUIiCcQACIDSU5SKhYKBwjkDxAIGAMSBwjkDxAIGAQYASgAOAWwAQBYAWgBmgEHEgVJbmRpYaIBEQoIL20vMDNyazASBUluZGlhqgEqCgIIIRICCAgSAghlEgIIFRICCGcSAghbEgIILxICCFoSAghUEgIIIBgBqgEPCgIIEhIDCJsBEgIIaBgBqgESCgIIFBICCB0SAggbEgIIUhgBqgEHCgMIoQIYAKoBGgoCCBwSAggHEgIIURICCHMSAghHEgIINhgBqgEfCgIIJRICCHUSAwigAhICCHcSAgh5EgIIehICCHYYAaoBGwoCCBESAggqEgIIQBICCDgSAwiZAhICCAIYAaoBPgoCCC4SAgg8EgIIVhICCDoSAwiHARICCBoSAghIEgMIgQISAgg9EgMIgwESAggDEgIIDBIDCIkBEgIIJxgBqgELCgMI4QISAghjGAGqARcKAghQEgIIGRIDCIQBEgIITBICCE8YAaoBBwoDCMsBGACqAQ4KAgg1EgIIExICCDIYAZIBAiAB -->
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>Badi-Gorela-Mulla Talai Rd, Haridas Ji Ki Magri, Pichola, Udaipur, Rajasthan 313001</p>
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                <section class="card">
+                    <a class="card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/Hotels/ITC Maratha.jpg" alt="">
+                        <div class="card-place-name">
+                            <h2>ITC Maratha</h2>
+                            <!-- https://www.google.com/travel/hotels/India/entity/CgoI7oPEhITgwYQkEAEaYkFHWklFZ1o5VnJLdmVUUnVTaUloVl9UZlh6VEo5cFptX25rODhUZ2U5UTZ1bUp2T2Fidmk4SHBlY1g5WGd0ejhfS2FnYW1IVzkwa3ZiTjNZZmltcE1YRjdnUTJmVWRpTi1B?g2lb=202158%2C2502548%2C4258168%2C4260007%2C4270442%2C4274032%2C4305595%2C4306835%2C4317915%2C4322823%2C4328159%2C4364504%2C4366684%2C4367953%2C4371334%2C4381263%2C4386665%2C4395590%2C4396533%2C4397706%2C4398672%2C4399105%2C4401769%2C4403881%2C4270859%2C4284970%2C4291517%2C4316256&hl=en&gl=in&un=1&ap=aAE&q=5%20star%20hotels%20in%20india&rp=EJr98c-_jeD1IRDX_tym2pDBlMABELKK1_im3KKwgwEQ5YzJtqe9158wOAFAAEgCogEFSW5kaWE&ictx=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&hrf=CgUIiCcQACIDSU5SKhYKBwjkDxAIGAMSBwjkDxAIGAQYASgAOAWwAQBYAWgBmgEHEgVJbmRpYaIBEQoIL20vMDNyazASBUluZGlhqgEqCgIIIRICCAgSAghlEgIIFRICCGcSAghbEgIILxICCFoSAghUEgIIIBgBqgEPCgIIEhIDCJsBEgIIaBgBqgESCgIIFBICCB0SAggbEgIIUhgBqgEHCgMIoQIYAKoBGgoCCBwSAggHEgIIURICCHMSAghHEgIINhgBqgEfCgIIJRICCHUSAwigAhICCHcSAgh5EgIIehICCHYYAaoBGwoCCBESAggqEgIIQBICCDgSAwiZAhICCAIYAaoBPgoCCC4SAgg8EgIIVhICCDoSAwiHARICCBoSAghIEgMIgQISAgg9EgMIgwESAggDEgIIDBIDCIkBEgIIJxgBqgELCgMI4QISAghjGAGqARcKAghQEgIIGRIDCIQBEgIITBICCE8YAaoBBwoDCMsBGACqAQ4KAgg1EgIIExICCDIYAZIBAiAB -->
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>Sahar Airport Rd,Ashok Nagar, Andheri East, Andheri, Maharashtra 400099</p>
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                <section class="card">
+                    <a class="card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/Hotels/The Fern Bhavnagar.jpg" alt="">
+                        <div class="card-place-name">
+                            <h2>The Fern Bhavnagar</h2>
+                            <!-- https://www.google.com/travel/hotels/India/entity/ChkIsorX-KbcorCDARoML2cvMWhnNHc3eWJoEAE?g2lb=202158%2C2502548%2C4258168%2C4260007%2C4270442%2C4274032%2C4305595%2C4306835%2C4317915%2C4322823%2C4328159%2C4364504%2C4366684%2C4367953%2C4371334%2C4381263%2C4386665%2C4395590%2C4396533%2C4397706%2C4398672%2C4399105%2C4401769%2C4403881%2C4270859%2C4284970%2C4291517%2C4316256&hl=en&gl=in&un=1&ap=aAE&q=5%20star%20hotels%20in%20india&rp=EJr98c-_jeD1IRDX_tym2pDBlMABELKK1_im3KKwgwEQ5YzJtqe9158wOAFAAEgCogEFSW5kaWE&ictx=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&hrf=CgUIiCcQACIDSU5SKhYKBwjkDxAIGAMSBwjkDxAIGAQYASgAOAWwAQBYAWgBmgEHEgVJbmRpYaIBEQoIL20vMDNyazASBUluZGlhqgEqCgIIIRICCAgSAghlEgIIFRICCGcSAghbEgIILxICCFoSAghUEgIIIBgBqgEPCgIIEhIDCJsBEgIIaBgBqgESCgIIFBICCB0SAggbEgIIUhgBqgEHCgMIoQIYAKoBGgoCCBwSAggHEgIIURICCHMSAghHEgIINhgBqgEfCgIIJRICCHUSAwigAhICCHcSAgh5EgIIehICCHYYAaoBGwoCCBESAggqEgIIQBICCDgSAwiZAhICCAIYAaoBPgoCCC4SAgg8EgIIVhICCDoSAwiHARICCBoSAghIEgMIgQISAgg9EgMIgwESAggDEgIIDBIDCIkBEgIIJxgBqgELCgMI4QISAghjGAGqARcKAghQEgIIGRIDCIQBEgIITBICCE8YAaoBBwoDCMsBGACqAQ4KAgg1EgIIExICCDIYAZIBAiAB -->
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>Near Sundaravas Bunglow, Kaliyabid, Bhavnagar, Gujarat 364002</p>
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                <section class="card">
+                    <a class="card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/Hotels/DoubleTree by Hilton.jpg" alt="">
+                        <div class="card-place-name">
+                            <h2>DoubleTree by Hilton</h2>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>Ambli Rd, Vikram Nagar, Ahmedabad, Gujarat 380058
+                                <!-- https://www.google.com/travel/hotels/India/entity/ChkIxPCa3PO18MpzGg0vZy8xMWI3cjViZmJoEAE?g2lb=202158%2C2502548%2C4258168%2C4260007%2C4270442%2C4274032%2C4305595%2C4306835%2C4317915%2C4322823%2C4328159%2C4364504%2C4366684%2C4367953%2C4371334%2C4381263%2C4386665%2C4395590%2C4396533%2C4397706%2C4398672%2C4399105%2C4401769%2C4403881%2C4270859%2C4284970%2C4291517%2C4316256&hl=en&gl=in&un=1&ap=aAE&q=5%20star%20hotels%20in%20india&rp=EJr98c-_jeD1IRDX_tym2pDBlMABELKK1_im3KKwgwEQ5YzJtqe9158wOAFAAEgCogEFSW5kaWE&ictx=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&hrf=CgUIiCcQACIDSU5SKhYKBwjkDxAIGAMSBwjkDxAIGAQYASgAOAWwAQBYAWgBmgEHEgVJbmRpYaIBEQoIL20vMDNyazASBUluZGlhqgEqCgIIIRICCAgSAghlEgIIFRICCGcSAghbEgIILxICCFoSAghUEgIIIBgBqgEPCgIIEhIDCJsBEgIIaBgBqgESCgIIFBICCB0SAggbEgIIUhgBqgEHCgMIoQIYAKoBGgoCCBwSAggHEgIIURICCHMSAghHEgIINhgBqgEfCgIIJRICCHUSAwigAhICCHcSAgh5EgIIehICCHYYAaoBGwoCCBESAggqEgIIQBICCDgSAwiZAhICCAIYAaoBPgoCCC4SAgg8EgIIVhICCDoSAwiHARICCBoSAghIEgMIgQISAgg9EgMIgwESAggDEgIIDBIDCIkBEgIIJxgBqgELCgMI4QISAghjGAGqARcKAghQEgIIGRIDCIQBEgIITBICCE8YAaoBBwoDCMsBGACqAQ4KAgg1EgIIExICCDIYAZIBAiAB -->
+                            </p>
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                <section class="card">
+                    <a class="card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/Hotels/Hotel Fairmont.jpg" alt="">
+                        <div class="card-place-name">
+                            <h2>Hotel Fairmont</h2>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>2 Riico, Kukas, Rajasthan 302028</p>
+                            <!-- https://www.google.com/travel/hotels/India/entity/ChkIpL7gsNOTj-nHARoML2cvMXBwMng4dm53EAE?g2lb=202158%2C2502548%2C4258168%2C4260007%2C4270442%2C4274032%2C4305595%2C4306835%2C4317915%2C4322823%2C4328159%2C4364504%2C4366684%2C4367953%2C4371334%2C4381263%2C4386665%2C4395590%2C4396533%2C4397706%2C4398672%2C4399105%2C4401769%2C4403881%2C4270859%2C4284970%2C4291517%2C4316256&hl=en&gl=in&un=1&ap=aAE&q=5%20star%20hotels%20in%20india&rp=EJr98c-_jeD1IRDX_tym2pDBlMABELKK1_im3KKwgwEQ5YzJtqe9158wOAFAAEgCogEFSW5kaWE&ictx=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&hrf=CgUIiCcQACIDSU5SKhYKBwjkDxAIGAMSBwjkDxAIGAQYASgAOAWwAQBYAWgBmgEHEgVJbmRpYaIBEQoIL20vMDNyazASBUluZGlhqgEqCgIIIRICCAgSAghlEgIIFRICCGcSAghbEgIILxICCFoSAghUEgIIIBgBqgEPCgIIEhIDCJsBEgIIaBgBqgESCgIIFBICCB0SAggbEgIIUhgBqgEHCgMIoQIYAKoBGgoCCBwSAggHEgIIURICCHMSAghHEgIINhgBqgEfCgIIJRICCHUSAwigAhICCHcSAgh5EgIIehICCHYYAaoBGwoCCBESAggqEgIIQBICCDgSAwiZAhICCAIYAaoBPgoCCC4SAgg8EgIIVhICCDoSAwiHARICCBoSAghIEgMIgQISAgg9EgMIgwESAggDEgIIDBIDCIkBEgIIJxgBqgELCgMI4QISAghjGAGqARcKAghQEgIIGRIDCIQBEgIITBICCE8YAaoBBwoDCMsBGACqAQ4KAgg1EgIIExICCDIYAZIBAiAB -->
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                <section class="card">
+                    <a class="card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/Hotels/Ramada Resort.jpg" alt="">
+                        <div class="card-place-name">
+                            <h2>Ramada Resort</h2>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>Kumbalam South, Kumbalam, Kochi, Kerala 682506</p>
+                            <!-- https://www.google.com/travel/hotels/India/entity/ChgIsf782sOZ1bSnARoLL2cvMXRqeXMxMW0QAQ?g2lb=202158%2C2502548%2C4258168%2C4260007%2C4270442%2C4274032%2C4305595%2C4306835%2C4317915%2C4322823%2C4328159%2C4364504%2C4366684%2C4367953%2C4371334%2C4381263%2C4386665%2C4395590%2C4396533%2C4397706%2C4398672%2C4399105%2C4401769%2C4403881%2C4270859%2C4284970%2C4291517%2C4316256&hl=en&gl=in&un=1&ap=aAE&q=5%20star%20hotels%20in%20india&rp=EJr98c-_jeD1IRDX_tym2pDBlMABELKK1_im3KKwgwEQ5YzJtqe9158wOAFAAEgCogEFSW5kaWE&ictx=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&hrf=CgUIiCcQACIDSU5SKhYKBwjkDxAIGAMSBwjkDxAIGAQYASgAOAWwAQBYAWgBmgEHEgVJbmRpYaIBEQoIL20vMDNyazASBUluZGlhqgEqCgIIIRICCAgSAghlEgIIFRICCGcSAghbEgIILxICCFoSAghUEgIIIBgBqgEPCgIIEhIDCJsBEgIIaBgBqgESCgIIFBICCB0SAggbEgIIUhgBqgEHCgMIoQIYAKoBGgoCCBwSAggHEgIIURICCHMSAghHEgIINhgBqgEfCgIIJRICCHUSAwigAhICCHcSAgh5EgIIehICCHYYAaoBGwoCCBESAggqEgIIQBICCDgSAwiZAhICCAIYAaoBPgoCCC4SAgg8EgIIVhICCDoSAwiHARICCBoSAghIEgMIgQISAgg9EgMIgwESAggDEgIIDBIDCIkBEgIIJxgBqgELCgMI4QISAghjGAGqARcKAghQEgIIGRIDCIQBEgIITBICCE8YAaoBBwoDCMsBGACqAQ4KAgg1EgIIExICCDIYAZIBAiAB -->
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                </div>
+            </div>
+        </div>
+    </section>   
+    <section class="restaurant">
+        <div class="container place-container">
+            <div class="prev-btn ctrl-btn restaurantPrvbtn" > &lt;  </div>
+            <div class="next-btn ctrl-btn restaurantNextbtn"> &gt; </div>
+            <div>
+                <h1>Top Restaurant</h1>
+                <!-- https://www.cntraveller.com/gallery/best-restaurants-in-india -->
+            </div>
+            <hr>
+            <div class="card-container" id="restaurantSlider">
+                <div class="card-wrapper" id="restaurantSlide">
+                <section class="card">
+                    <a class="card-link"  id="place-card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/res/THE BOMBAY CANTEEN.jpg" alt="">
+                        <div class="card-place-name" id = "card-place-name">
+                            <h2>THE BOMBAY CANTEEN</h2>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>The Bombay Canteen, S.B. Road, Kamala Mills,Parel, Mumbai,Maharashtra 400013</p>
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                <section class="card">
+                    <a class="card-link"  id="place-card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/res/INDIAN ACCENT.jpg" alt="">
+                        <div class="card-place-name" id = "card-place-name">
+                            <h2>INDIAN ACCENT</h2>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>Indian Accent, The Lodhi, Lodhi Rd, CGO Complex, Pragati Vihar, New Delhi, Delhi 110003,</p>
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                <script>
+                    
+                </script>
+                <section class="card">
+                    <a class="card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/res/BOMRA'S.jpg" alt="">
+                        <div class="card-place-name">
+                            <h2>BOMRA'S</h2>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>Bomra's, 247, Fort Aquada Road, Candolim, Goa 403515, India</p>
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                <section class="card">
+                    <a class="card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/res/TOAST & TONIC.jpg" alt="">
+                        <div class="card-place-name">
+                            <h2>TOAST & TONIC</h2>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>Toast & Tonic, 14/1, Wood Street, Ashok Nagar, Bengaluru, Karnataka 560025, India</p>
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                <section class="card">
+                    <a class="card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/res/Karavalli, The Gateway Hotel.jpg" alt="">
+                        <div class="card-place-name">
+                            <h2>Karavalli, The Gateway Hotel</h2>
+                            <!-- https://www.google.com/search?sxsrf=ALeKk03OULAO3gadTJ8FQ95RkFruD8qHpQ%3A1594297904108&ei=MA4HX9KpBsmH9QOtsL_oBA&q=karavalli+the+gateway+hotel+bangalore&gs_ssp=eJwFwcsJgDAMAFC8Cu7Qi-cmWht1BLdIJK1iUSjFz_a-Vzc2WkSh4cyuQ6jmFt5eWNGTOh8EQIcZXiIS6B1O4whhxbC0B2e-OaXdlE1N5KIPf2a7iiYjfEZOV9Yfy_Ic0A&oq=Karavalli%2C+The+Gateway+Hotel+&gs_lcp=CgZwc3ktYWIQAxgBMgQIIxAnMggILhDHARCvATICCAAyBggAEBYQHjIGCAAQFhAeMgYIABAWEB46BwgAEEcQsANQuClYuClgnkJoAXAAeACAAegDiAHoA5IBAzQtMZgBAKABAaoBB2d3cy13aXo&sclient=psy-ab -->
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>Vivanta Bengaluru, 66, Residency Rd, Bengaluru, Karnataka 560025</p>
+                            <!-- https://food.ndtv.com/lists/tripadvisor-travellers-choice-awards-indias-10-best-fine-dining-restaurants-1232466 -->
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                <section class="card">
+                    <a class="card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/res/Peshawri.jpg" alt="">
+                        <div class="card-place-name">
+                            <h2>Peshawri</h2>
+                            <!-- https://food.ndtv.com/lists/tripadvisor-travellers-choice-awards-indias-10-best-fine-dining-restaurants-1232466 -->
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>ITC Maratha Hotel, Sahar Road, Andheri East | Andheri East, Mumbai</p>
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                <section class="card">
+                    <a class="card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/res/Villa Maya.jpg" alt="">
+                        <div class="card-place-name">
+                            <h2>Villa Maya</h2>
+                            <!-- https://food.ndtv.com/lists/tripadvisor-travellers-choice-awards-indias-10-best-fine-dining-restaurants-1232466 -->
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>Near Muthoot Sky Chef, Enjakkal, 120,Vallakkadavu, Thiruvananthapuram, Kerala</p>
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                <section class="card">
+                    <a class="card-link" href="">
+                    <div class="card-img-container">
+                        <img class="card-img" src="../img/res/Agashiye.jpg" alt="">
+                        <div class="card-place-name">
+                            <h2>Agashiye</h2>
+                            <!-- https://food.ndtv.com/lists/tripadvisor-travellers-choice-awards-indias-10-best-fine-dining-restaurants-1232466 -->
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <article>
+                            <p>The House of MG, Opp. Sidi Saiyad Jali, Lal Darwaja, Ahmedabad, Gujarat</p>
+                        </article>
+                    </div>
+                    </a>
+                </section>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <footer class="container">
+        <div class="footer-container">
+          <div class="left-col">
+            <p class="logo"> Trip4U </p>
+            <div class="social-media">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="rights-text">© 2020 Created By Trip4U All Rights Reserved.</p>
+          </div>
+  
+          <div class="right-col">
+            <h1>Became a Subscriber</h1>
+            <div class="border"></div>
+            <p>Enter Your Email to get our news.</p>
+            <form action="" class="newsletter-form">
+              <input type="text" class="txtb" placeholder="Enter Your Email">
+              <input type="submit" class="btn" value="submit">
+            </form>
+          </div>
+        </div>
+      </footer>     
+</body>
+</html>
